@@ -1,19 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function DayCheckBox({ day }) {
-    const [selected, setSelected] = useState(false);
-
-    const handleClick = () => {
-        setSelected(!selected);
-    }
+function DayCheckBox({ day, isSelected, onToggle }) {
     return (
         <div
-            className={`w-5 h-5 mx-1 border-black border-2 rounded-full text-xs cursor-pointer flex justify-center items-center hover:bg-gray-400 hover:border-white hover:transition-transform ${selected ? 'bg-gray-400' : 'bg-white'}`}
-            onClick={handleClick}
+            className={`w-8 h-6 mx-1 border-black border-2 rounded-full text-xs cursor-pointer flex justify-center items-center ${isSelected ? 'bg-gray-400' : 'bg-white'
+                }`}
+            onClick={() => onToggle(day)}
         >
             {day}
         </div>
-    )
+    );
 }
 
 export default DayCheckBox

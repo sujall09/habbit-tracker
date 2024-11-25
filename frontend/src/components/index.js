@@ -1,7 +1,7 @@
 import CreateHabbit from "./CreateHabbit";
-import Daily from "./Daily"
+import Daily from "./Daily";
 
 export {
     Daily,
-    CreateHabbit
+    CreateHabbit,
 }
